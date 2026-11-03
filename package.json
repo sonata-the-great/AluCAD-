@@ -1,0 +1,1 @@
+{ "name": "alu-cad", "version": "0.1.0", "type": "module", "scripts": { "test": "node tests/phase1.test.mjs" } }
