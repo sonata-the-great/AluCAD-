@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#14181d">
+<title>ALU CAD</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="app">
+  <header id="top">
+    <b class="brand">ALU CAD</b><span class="sp"></span>
+    <button id="bUndo">Undo</button><button id="bRedo">Redo</button><button id="bFit">Fit</button><button id="bTouch">Touch: Offset</button>
+  </header>
+  <main id="stage">
+    <canvas id="cv"></canvas>
+    <div id="vm">
+      <div class="vm-bar"><span class="grip">⠿</span><button data-act="speed">Normal</button><button data-act="min">–</button></div>
+      <div class="vm-body">
+        <div class="pad">
+          <i></i><button data-dir="up">▲</button><i></i>
+          <button data-dir="left">◀</button><i class="dot">◎</i><button data-dir="right">▶</button>
+          <i></i><button data-dir="down">▼</button><i></i>
+        </div>
+        <div class="clicks"><button data-act="L">Left</button><button data-act="R">Right</button></div>
+      </div>
+    </div>
+  </main>
+  <nav id="favs">
+    <button data-cmd="LINE">LINE</button><button data-cmd="POLYLINE">POLYLINE</button><button data-cmd="RECTANGLE">RECTANGLE</button><button data-cmd="CIRCLE">CIRCLE</button><button data-cmd="ARC">ARC</button><button data-cmd="ELLIPSE">ELLIPSE</button><button data-cmd="OFFSET">OFFSET</button><button data-cmd="TRIM">TRIM</button><button data-cmd="EXTEND">EXTEND</button><button data-cmd="FILLET">FILLET</button><button data-cmd="CHAMFER">CHAMFER</button><button data-cmd="JOIN">JOIN</button><button data-cmd="BREAK">BREAK</button><button data-cmd="EXPLODE">EXPLODE</button><button data-cmd="MOVE">MOVE</button><button data-cmd="COPY">COPY</button><button data-cmd="ROTATE">ROTATE</button><button data-cmd="MIRROR">MIRROR</button><button data-cmd="SCALE">SCALE</button><button data-cmd="ERASE">ERASE</button><button data-cmd="DIST">DIST</button><button data-cmd="UNDO">UNDO</button><button data-cmd="REDO">REDO</button>
+  </nav>
+  <div id="modes"><button id="bOsnap">OSNAP</button><button id="bGrid">GRID</button><button id="bSnap">SNAP</button><button id="bOrtho">ORTHO</button><button id="bPolar">POLAR</button><button id="bDyn">DYN</button><button id="bSettings">⚙</button></div>
+  <footer id="cmd">
+    <div id="log">Type a command (L, REC, C, E) or use the toolbar.</div>
+    <div class="row"><span id="prompt">Command:</span>
+      <input id="cin" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="enter" placeholder="command or value"></div>
+    <div id="status"></div>
+  </footer>
+</div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
